@@ -68,7 +68,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Kbarut\Telecommunication\LandlineChecker;
 
-$landlineNumber = ''+491501912345";
+$landlineNumber = "+491501912345";
 
 $landlineChecker = new LandlineChecker();
 
