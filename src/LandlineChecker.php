@@ -18,6 +18,9 @@ class LandlineChecker
 		
 	$cleaned = $this->clean($input);
 
+	if ($this->emptyInput($cleaned) === true)
+	    return false;    
+
 	$chars_count = $this->getLength($cleaned);
 
 	if (($chars_count < 6) or ($chars_count > 14))
