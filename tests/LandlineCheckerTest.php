@@ -36,7 +36,7 @@ it('wrong characters types', function () {
 
 it('assignable no country code german landline num', function () {
 
-    $landlineChecker = Mockery::mock(LandlineChecker::class);
+    	$landlineChecker = Mockery::mock(LandlineChecker::class);
 	
 	$res = $landlineChecker->validate('02012345678');
 	
