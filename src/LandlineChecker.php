@@ -142,9 +142,8 @@ class LandlineChecker
 			if ($key === 'NDC') {
 				$ndc2 = '0' . $value;	
 				$ndc_length = strlen($ndc2);
+				$user_ndc = substr($cleaned_input,0,$ndc_length);
 			}
-
-			$user_ndc = substr($cleaned_input,0,$ndc_length);
 					
 			if ($key === 'min_digits_count')
 				$min = $value;
@@ -170,8 +169,7 @@ class LandlineChecker
 					
 			}	
 		
-		   }
-			
+		   }			
 		   if ($res === true)
 			return $res;			
 	  }
@@ -208,9 +206,8 @@ class LandlineChecker
 		    if ($key === 'NDC') {
 		        $ndc2 = $value;
 			$ndc_length = strlen($ndc2);
+			$user_ndc = substr($cleaned_input,0,$ndc_length);    
 		     }
-
-		     $user_ndc = substr($cleaned_input,0,$ndc_length);
 					
 		     if ($key === 'min_digits_count')
 		         $min = $value;
@@ -269,17 +266,16 @@ class LandlineChecker
 		    if ($key === 'NDC') {
 			 $ndc2 = $value;
 			 $ndc_length = strlen($ndc2);
+			$user_ndc = substr($cleaned_input,0,$ndc_length);
 		    }
-
-		     $user_ndc = substr($cleaned_input,0,$ndc_length);
 					
-		      if ($key === 'min_digits_count')
-		          $min = $value;
+		    if ($key === 'min_digits_count')
+		        $min = $value;
 					
-		      if ($key === 'max_digits_count')
+		    if ($key === 'max_digits_count')
 			  $max = $value;
 		
-		      if ( (strlen($user_ndc) != 0) and (strlen($min) != 0) and (strlen($max) != 0) ) {
+		    if ( (strlen($user_ndc) != 0) and (strlen($min) != 0) and (strlen($max) != 0) ) {
 					
 		          if ( ($ndc2 === $user_ndc) and  (strlen($cleaned_input) >= $min) and (strlen($cleaned_input) <= $max) ) {
 						
@@ -292,12 +288,12 @@ class LandlineChecker
 				     $min = null;
 				     $max = null;
 			      }									
-		       }	
+		    }	
 		
-		    }		
-		    if ($res === true)
-		      return $res;							
 		}		
-		return $res;
-            }		
+		if ($res === true)
+		   return $res;							
+	    }		
+	    return $res;
+        }		
 }
