@@ -1,4 +1,4 @@
- [1. Project Description](#project-description)
+ [1 Project Description](#project-description)
  
  [2. Installation](#installation)
  
@@ -14,24 +14,38 @@ It takes into account the fact that when dialed, a german landline phone number 
 
 Germany geographic zone-based numbering system:
 
-Landline phone numbers (no country code) - DE.xlsm: (https://docs.google.com/spreadsheets/d/1KBjg9aYHE9L2tP8uCBhlpJKDxDE5BjGC)
-Landline phone numbers starting with 0049 - DE.xlsm: (https://docs.google.com/spreadsheets/d/1fmreE50HY6kvz5R8jAkrXGqkbk_mg_eW)
-Landline phone numbers starting with +49 - DE.xlsm: (https://docs.google.com/spreadsheets/d/1kBcdfDXQwXkh8-UUZgLklbo9pErH_vWw)
+Landline phone numbers (no country code) - DE.xlsm:
+
+(https://docs.google.com/spreadsheets/d/1KBjg9aYHE9L2tP8uCBhlpJKDxDE5BjGC)
+
+Landline phone numbers starting with 0049 - DE.xlsm: 
+
+(https://docs.google.com/spreadsheets/d/1fmreE50HY6kvz5R8jAkrXGqkbk_mg_eW)
+
+Landline phone numbers starting with +49 - DE.xlsm: 
+
+(https://docs.google.com/spreadsheets/d/1kBcdfDXQwXkh8-UUZgLklbo9pErH_vWw)
 
 Breakdown of the numbering system:
 
 note: NDC = "National Destination Code"
 
-1) Format without the country code = 0 + NDC + [ X<sub>1</sub>,X<sub>2</sub>, ... ,X<sub>s</sub>] , X<sub>1**≤**j<**≤**s</sub> = 0,1,2...9
+<b>1. Format without the country code = 0 + NDC + [ X<sub>1</sub>,X<sub>2</sub>, ... ,X<sub>s</sub>] </b>, X<sub>1**≤**j<**≤**s</sub> = 0,1,2...9
+
 Minimum total digits count: 6
+
 Maximum total digits count: 11
 
-2) Format with country code ''0049 " = 0049 + NDC +  [ X<sub>1</sub>,X<sub>2</sub>, ... ,X<sub>s</sub>] , X<sub>1**≤**j<**≤**s</sub> = 0,1,2...9
+<b>2. Format with country code ''0049 " = 0049 + NDC +  [ X<sub>1</sub>,X<sub>2</sub>, ... ,X<sub>s</sub>] </b>, X<sub>1**≤**j<**≤**s</sub> = 0,1,2...9
+
 Minimum total digits count: 9
+
 Maximum total digits count: 14
 
-3) Format with country code ''+49 " = +49 + NDC +  [ X<sub>1</sub>,X<sub>2</sub>, ... ,X<sub>s</sub>] , X<sub>1**≤**j<**≤**s</sub> = 0,1,2...9
+<b>3. Format with country code ''+49 " = +49 + NDC +  [ X<sub>1</sub>,X<sub>2</sub>, ... ,X<sub>s</sub>] </b>, X<sub>1**≤**j<**≤**s</sub> = 0,1,2...9
+
 Minimum total characters count: 8
+
 Maximum total characters count: 13
 
 # Installation
