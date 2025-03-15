@@ -57,21 +57,23 @@ class LandlineChecker
     */
     public function clean(string $input): string
     {
-        $first =  substr(preg_replace('/\s+/','',$input),0,1);
+       $first =  substr(preg_replace('/\s+/','',$input),0,1);
 
 	if ($first === '+') {
 
-	   $rest = substr(preg_replace('/\s+/','',$input),1);
+	    $rest = substr(preg_replace('/\s+/','',$input),1);
 
-	   $cleaned = (ctype_digit(($rest))) ? $first . $rest : 'always-wrong!!!!!!'; 
+	    $cleaned = (ctype_digit($rest)) ? $first . $rest : 'always-wrong!!!!!!'; 
 
-	} else {
-		
-	   $cleaned = (ctype_digit(($input))) ? $cleaned : 'always-wrong!!!!!!'; 
+        } else {
+
+	    $input2 = substr(preg_replace('/\s+/','',$input),0);
+
+	    $cleaned = (ctype_digit($input2)) ? $input2 : 'always-wrong!!!!!!'; 
 	}
 		
 	 return $cleaned;
-    }
+     }
 	
     /**
     * Returns the $cleaned_input string characters count (>0)
