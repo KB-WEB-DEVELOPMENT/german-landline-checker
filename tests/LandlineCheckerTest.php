@@ -6,7 +6,7 @@ use Kbarut\Telecommunication\LandlineChecker;
 
 it('empty input', function () {
 	
-    $landlineChecker = Mockery::mock(LandlineChecker::class);
+	$landlineChecker = Mockery::mock(LandlineChecker::class);
 	
 	$res = $landlineChecker->validate('');
 	
@@ -16,7 +16,7 @@ it('empty input', function () {
 
 it('wrong characters count', function () {
 	
-    $landlineChecker = Mockery::mock(LandlineChecker::class);
+    	$landlineChecker = Mockery::mock(LandlineChecker::class);
 	
 	$res = $landlineChecker->validate('020123456789');
 	
@@ -26,7 +26,7 @@ it('wrong characters count', function () {
 
 it('wrong characters types', function () {
 
-    $landlineChecker = Mockery::mock(LandlineChecker::class);
+    	$landlineChecker = Mockery::mock(LandlineChecker::class);
 	
 	$res = $landlineChecker->validate('02012A');
 	
@@ -46,7 +46,7 @@ it('assignable no country code german landline num', function () {
 
 it('assignable german landline num with country code "0049"', function () {
 
-    $mobileChecker = Mockery::mock(LandlineChecker::class);
+   	$mobileChecker = Mockery::mock(LandlineChecker::class);
 	
 	$res = $mobileChecker->validate('00492012345678');
 	
@@ -56,7 +56,7 @@ it('assignable german landline num with country code "0049"', function () {
 
 it('assignable german landline num with country code "+49"', function () {
 
-    $mobileChecker = Mockery::mock(LandlineChecker::class);
+    	$mobileChecker = Mockery::mock(LandlineChecker::class);
 	
 	$res = $mobileChecker->validate('+492012345678');
 	
