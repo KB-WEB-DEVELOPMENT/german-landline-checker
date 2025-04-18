@@ -13,7 +13,7 @@ class LandlineChecker
    */	
     public function validate(string $input): bool
     {		
-	if ($this->emptyInput($input) === true)
+	if ($this->emptyInput($input) == true)
 	    return false;
 		
 	$cleaned = $this->clean($input);
@@ -170,8 +170,8 @@ class LandlineChecker
 			}	
 		
 		   }			
-		   if ($res === true)
-			return $res;			
+		   if ($res)
+		     return $res;			
 	  }
 
 	  return $res;	
@@ -231,7 +231,7 @@ class LandlineChecker
 		      }	
 		
 		  }	
-		  if ($res === true)
+		  if ($res)
 		     return $res;		
 	    }		
 	    return $res;			
@@ -266,7 +266,7 @@ class LandlineChecker
 		    if ($key === 'NDC') {
 			 $ndc2 = $value;
 			 $ndc_length = strlen($ndc2);
-			$user_ndc = substr($cleaned_input,0,$ndc_length);
+			 $user_ndc = substr($cleaned_input,0,$ndc_length);
 		    }
 					
 		    if ($key === 'min_digits_count')
@@ -291,7 +291,7 @@ class LandlineChecker
 		    }	
 		
 		}		
-		if ($res === true)
+		if ($res)
 		   return $res;							
 	    }		
 	    return $res;
